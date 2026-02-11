@@ -6,6 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		216EB3C92F3CF6A700A54ED1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216EB3C82F3CF6A700A54ED1 /* ContentView.swift */; };
+		216EB3F42F3CF7FC00A54ED1 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216EB3F32F3CF74D00A54ED1 /* CharacterListViewModel.swift */; };
+		216EB3F52F3CF80E00A54ED1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216EB3F22F3CF73C00A54ED1 /* NetworkService.swift */; };
+		216EB3F62F3CF81300A54ED1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216EB3F12F3CF72B00A54ED1 /* Character.swift */; };
+		21F32A212F3CFADD0074BDF3 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A202F3CFAD80074BDF3 /* CharacterDetailView.swift */; };
+		21F32A242F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A222F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld */; };
+		21F32A262F3CFE8F0074BDF3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A252F3CFE8D0074BDF3 /* Persistence.swift */; };
+		21F32A282F3CFFA60074BDF3 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A272F3CFFA50074BDF3 /* FavoritesView.swift */; };
+		21F32A302F3D1A7C0074BDF3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21F32A2F2F3D1A7C0074BDF3 /* FirebaseAuth */; };
+		21F32A322F3D1A850074BDF3 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 21F32A312F3D1A850074BDF3 /* FirebaseCore */; };
+		21F32A342F3D1B790074BDF3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A332F3D1B780074BDF3 /* LoginView.swift */; };
+		21F32A362F3D1C3A0074BDF3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A352F3D1C390074BDF3 /* ProfileView.swift */; };
+		21F32A382F3D22010074BDF3 /* EditCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A372F3D21FF0074BDF3 /* EditCharacterView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		216EB3D12F3CF6AA00A54ED1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,9 +41,37 @@
 
 /* Begin PBXFileReference section */
 		216EB3C32F3CF6A700A54ED1 /* MultiverseWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiverseWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		216EB3C82F3CF6A700A54ED1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		216EB3D02F3CF6AA00A54ED1 /* MultiverseWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiverseWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		216EB3DA2F3CF6AA00A54ED1 /* MultiverseWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiverseWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		216EB3F12F3CF72B00A54ED1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		216EB3F22F3CF73C00A54ED1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		216EB3F32F3CF74D00A54ED1 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		21F32A202F3CFAD80074BDF3 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		21F32A232F3CFDB10074BDF3 /* MultiverseData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MultiverseData.xcdatamodel; sourceTree = "<group>"; };
+		21F32A252F3CFE8D0074BDF3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		21F32A272F3CFFA50074BDF3 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		21F32A332F3D1B780074BDF3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		21F32A352F3D1C390074BDF3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		21F32A372F3D21FF0074BDF3 /* EditCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCharacterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		21F32A2B2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWiki" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 216EB3C22F3CF6A700A54ED1 /* MultiverseWiki */;
+		};
+		21F32A2C2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWikiUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 216EB3D92F3CF6AA00A54ED1 /* MultiverseWikiUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		216EB3C52F3CF6A700A54ED1 /* MultiverseWiki */ = {
@@ -42,6 +86,10 @@
 		};
 		216EB3DD2F3CF6AA00A54ED1 /* MultiverseWikiUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				21F32A2B2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWiki" target */,
+				21F32A2C2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWikiUITests" target */,
+			);
 			path = MultiverseWikiUITests;
 			sourceTree = "<group>";
 		};
@@ -52,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F32A322F3D1A850074BDF3 /* FirebaseCore in Frameworks */,
+				21F32A302F3D1A7C0074BDF3 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +125,15 @@
 		216EB3BA2F3CF6A700A54ED1 = {
 			isa = PBXGroup;
 			children = (
+				21F32A222F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld */,
+				216EB3F02F3CF71700A54ED1 /* Views */,
+				216EB3EF2F3CF71000A54ED1 /* ViewModels */,
+				216EB3EE2F3CF70800A54ED1 /* Services */,
+				216EB3ED2F3CF6F900A54ED1 /* Models */,
 				216EB3C52F3CF6A700A54ED1 /* MultiverseWiki */,
 				216EB3D32F3CF6AA00A54ED1 /* MultiverseWikiTests */,
 				216EB3DD2F3CF6AA00A54ED1 /* MultiverseWikiUITests */,
+				21F32A2E2F3D1A7C0074BDF3 /* Frameworks */,
 				216EB3C42F3CF6A700A54ED1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +146,51 @@
 				216EB3DA2F3CF6AA00A54ED1 /* MultiverseWikiUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		216EB3ED2F3CF6F900A54ED1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				216EB3F12F3CF72B00A54ED1 /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		216EB3EE2F3CF70800A54ED1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				21F32A252F3CFE8D0074BDF3 /* Persistence.swift */,
+				216EB3F22F3CF73C00A54ED1 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		216EB3EF2F3CF71000A54ED1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				216EB3F32F3CF74D00A54ED1 /* CharacterListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		216EB3F02F3CF71700A54ED1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21F32A372F3D21FF0074BDF3 /* EditCharacterView.swift */,
+				21F32A352F3D1C390074BDF3 /* ProfileView.swift */,
+				21F32A332F3D1B780074BDF3 /* LoginView.swift */,
+				21F32A272F3CFFA50074BDF3 /* FavoritesView.swift */,
+				21F32A202F3CFAD80074BDF3 /* CharacterDetailView.swift */,
+				216EB3C82F3CF6A700A54ED1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21F32A2E2F3D1A7C0074BDF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +213,8 @@
 			);
 			name = MultiverseWiki;
 			packageProductDependencies = (
+				21F32A2F2F3D1A7C0074BDF3 /* FirebaseAuth */,
+				21F32A312F3D1A850074BDF3 /* FirebaseCore */,
 			);
 			productName = MultiverseWiki;
 			productReference = 216EB3C32F3CF6A700A54ED1 /* MultiverseWiki.app */;
@@ -195,6 +298,9 @@
 			);
 			mainGroup = 216EB3BA2F3CF6A700A54ED1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				21F32A2D2F3D19700074BDF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 216EB3C42F3CF6A700A54ED1 /* Products */;
 			projectDirPath = "";
@@ -236,6 +342,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F32A242F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld in Sources */,
+				21F32A262F3CFE8F0074BDF3 /* Persistence.swift in Sources */,
+				216EB3C92F3CF6A700A54ED1 /* ContentView.swift in Sources */,
+				21F32A382F3D22010074BDF3 /* EditCharacterView.swift in Sources */,
+				216EB3F42F3CF7FC00A54ED1 /* CharacterListViewModel.swift in Sources */,
+				21F32A212F3CFADD0074BDF3 /* CharacterDetailView.swift in Sources */,
+				216EB3F62F3CF81300A54ED1 /* Character.swift in Sources */,
+				216EB3F52F3CF80E00A54ED1 /* NetworkService.swift in Sources */,
+				21F32A342F3D1B790074BDF3 /* LoginView.swift in Sources */,
+				21F32A362F3D1C3A0074BDF3 /* ProfileView.swift in Sources */,
+				21F32A282F3CFFA60074BDF3 /* FavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +687,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21F32A2D2F3D19700074BDF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21F32A2F2F3D1A7C0074BDF3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21F32A2D2F3D19700074BDF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		21F32A312F3D1A850074BDF3 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21F32A2D2F3D19700074BDF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		21F32A222F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21F32A232F3CFDB10074BDF3 /* MultiverseData.xcdatamodel */,
+			);
+			currentVersion = 21F32A232F3CFDB10074BDF3 /* MultiverseData.xcdatamodel */;
+			path = MultiverseData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 216EB3BB2F3CF6A700A54ED1 /* Project object */;
 }

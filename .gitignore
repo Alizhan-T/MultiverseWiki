@@ -1,0 +1,14 @@
+.DS_Store
+*.swp
+*~
+.apple
+DerivedData
+.GUI
+*.xcuserstate
+xcuserdata/
+os_activity_dt_mode
+*.break
+*.ipa
+*.dSYM.zip
+*.dSYM
+*archive
