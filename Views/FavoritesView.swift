@@ -15,46 +15,45 @@ struct FavoritesView: View {
         NavigationView {
             List {
                 ForEach(favorites) { favorite in
-                    HStack {
-                        if let imageLink = favorite.image, let url = URL(string: imageLink) {
-                            AsyncImage(url: url) { image in
-                                image.resizable().scaledToFit()
-                            } placeholder: {
-                                Color.gray.opacity(0.3)
+                     NavigationLink(destination: FavoriteDetailView(favorite: favorite)) {
+                        HStack {
+                            if let imageLink = favorite.image, let url = URL(string: imageLink) {
+                                AsyncImage(url: url) { image in
+                                    image.resizable().scaledToFit()
+                                } placeholder: {
+                                    Color.gray.opacity(0.3)
+                                }
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
                             }
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                        }
-                        
-                        VStack(alignment: .leading) {
-                            Text(favorite.name ?? "Unknown")
-                                .font(.headline)
-                            Text(favorite.status ?? "Unknown")
-                                .font(.subheadline)
-                                .foregroundColor(favorite.status == "Alive" ? .green : .red)
+                            
+                            VStack(alignment: .leading) {
+                                Text(favorite.name ?? "Unknown").font(.headline)
+                                Text(favorite.status ?? "Unknown")
+                                    .font(.subheadline)
+                                    .foregroundColor(favorite.status == "Alive" ? .green : .red)
+                            }
                         }
                     }
-                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                        Button(role: .destructive) {
-                            deleteCharacter(favorite)
-                        } label: {
+                     .contextMenu {
+                        Button { characterToEdit = favorite } label: {
+                            Label("Edit", systemImage: "pencil")
+                        }
+                        Button(role: .destructive) { deleteCharacter(favorite) } label: {
                             Label("Delete", systemImage: "trash")
                         }
                     }
-                    .swipeActions(edge: .leading, allowsFullSwipe: false) {
-                        Button {
-                            characterToEdit = favorite
-                        } label: {
-                            Label("Edit", systemImage: "pencil")
+                    .swipeActions(edge: .trailing) {
+                        Button(role: .destructive) { deleteCharacter(favorite) } label: {
+                            Label("Delete", systemImage: "trash")
                         }
-                        .tint(.blue)
                     }
                 }
             }
             .navigationTitle("Favorites")
-            // Здесь открываем окно редактирования
             .sheet(item: $characterToEdit) { character in
                 EditCharacterView(character: character)
+                    .environment(\.managedObjectContext, viewContext)
             }
         }
     }

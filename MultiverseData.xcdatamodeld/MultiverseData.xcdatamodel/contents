@@ -7,5 +7,6 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="species" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="story" optional="YES" attributeType="String"/>
     </entity>
 </model>

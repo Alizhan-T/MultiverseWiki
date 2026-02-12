@@ -23,64 +23,70 @@ import CoreData
     }
 }
 
- struct MainCharacterListView: View {
+struct MainCharacterListView: View {
     @StateObject private var viewModel = CharacterListViewModel()
     
-     @Namespace private var animation
-    @State private var selectedCharacter: Character? = nil
-    @State private var showDetail = false
-    
     var body: some View {
-        ZStack {
-             NavigationView {
-                List(viewModel.filteredCharacters) { character in
-                    HStack {
-                         if selectedCharacter?.id != character.id {
-                            AsyncImage(url: URL(string: character.image)) { phase in
-                                if let image = phase.image {
-                                    image.resizable().scaledToFit()
-                                } else {
-                                    Color.gray.opacity(0.3)
-                                }
-                            }
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                            .matchedGeometryEffect(id: character.id, in: animation)
-                        } else {
-                             Circle().fill(Color.clear).frame(width: 50, height: 50)
-                        }
-                        
-                        VStack(alignment: .leading) {
+        NavigationView {
+            List {
+                ForEach(viewModel.filteredCharacters) { character in
+                    NavigationLink(destination: CharacterDetailView(
+                        character: character,
+                        animation: Namespace().wrappedValue,
+                        closeAction: {}
+                    )) {
+                        HStack {
+                            AsyncImage(url: URL(string: character.image)) { img in
+                                img.resizable().scaledToFit()
+                            } placeholder: { Color.gray.opacity(0.3) }
+                            .frame(width: 50, height: 50).clipShape(Circle())
+                            
                             Text(character.name).font(.headline)
-                            Text(character.status)
-                                .font(.subheadline)
-                                .foregroundColor(character.status == "Alive" ? .green : .red)
                         }
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                            selectedCharacter = character
-                            showDetail = true
-                        }
+                    .onAppear {
+                        viewModel.shouldLoadMore(currentCharacter: character)
                     }
-                    .onAppear { viewModel.shouldLoadMore(currentCharacter: character) }
                 }
-                .navigationTitle("Rick & Morty")
-                .searchable(text: $viewModel.searchText)
-                .task { await viewModel.loadData() }
+                
+                if viewModel.isLoading {
+                    ProgressView().frame(maxWidth: .infinity)
+                }
             }
-            .opacity(showDetail ? 0 : 1) // Скрываем список, когда открываем детали
-
-             if let character = selectedCharacter, showDetail {
-                CharacterDetailView(character: character, animation: animation) {
-                    // Действие при закрытии (крестик)
-                    withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                        showDetail = false
-                        selectedCharacter = nil
+            .navigationTitle("Characters")
+            .task {
+                await viewModel.loadData()
+            }
+            .overlay {
+                if let error = viewModel.errorMessage, viewModel.characters.isEmpty {
+                    VStack(spacing: 20) {
+                        Image(systemName: "wifi.slash")
+                            .font(.system(size: 60))
+                            .foregroundColor(.gray)
+                        
+                        Text("Connection error")
+                            .font(.title2).bold()
+                        
+                        Text(error)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Button(action: {
+                            viewModel.retry()
+                        }) {
+                            Text("Try again")
+                                .bold()
+                                .padding()
+                                .frame(width: 200)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
                     }
+                    .padding()
+                    .background(Color(.systemBackground))
                 }
-                .zIndex(2)
             }
         }
     }

@@ -10,7 +10,7 @@ struct PersistenceController {
         
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
-                fatalError("Не удалось загрузить базу: \(error)")
+                fatalError("cannot load persistent stores: \(error)")
             }
         }
         

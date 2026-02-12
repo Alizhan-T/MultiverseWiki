@@ -20,6 +20,12 @@
 		21F32A342F3D1B790074BDF3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A332F3D1B780074BDF3 /* LoginView.swift */; };
 		21F32A362F3D1C3A0074BDF3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A352F3D1C390074BDF3 /* ProfileView.swift */; };
 		21F32A382F3D22010074BDF3 /* EditCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A372F3D21FF0074BDF3 /* EditCharacterView.swift */; };
+		21F32A4C2F3D2A0A0074BDF3 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A4B2F3D2A070074BDF3 /* NetworkMonitor.swift */; };
+		21F32A502F3DC5510074BDF3 /* FavoriteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A4F2F3DC54F0074BDF3 /* FavoriteDetailView.swift */; };
+		21F32A522F3DC5D30074BDF3 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A512F3DC5D10074BDF3 /* InfoRow.swift */; };
+		21F32A532F3DC60E0074BDF3 /* StoryGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A4E2F3DC3910074BDF3 /* StoryGenerator.swift */; };
+		21F32A552F3DC9920074BDF3 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A542F3DC9910074BDF3 /* Logger+Extension.swift */; };
+		21F32A5A2F3DCE640074BDF3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 21F32A592F3DCE610074BDF3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,24 +60,18 @@
 		21F32A332F3D1B780074BDF3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		21F32A352F3D1C390074BDF3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		21F32A372F3D21FF0074BDF3 /* EditCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCharacterView.swift; sourceTree = "<group>"; };
+		21F32A4B2F3D2A070074BDF3 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		21F32A4E2F3DC3910074BDF3 /* StoryGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryGenerator.swift; sourceTree = "<group>"; };
+		21F32A4F2F3DC54F0074BDF3 /* FavoriteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailView.swift; sourceTree = "<group>"; };
+		21F32A512F3DC5D10074BDF3 /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		21F32A542F3DC9910074BDF3 /* Logger+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
+		21F32A572F3DCE290074BDF3 /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
+		21F32A582F3DCE480074BDF3 /* RELEASE_NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE_NOTES.md; sourceTree = "<group>"; };
+		21F32A592F3DCE610074BDF3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
+		21F32A5B2F3DCEC90074BDF3 /* QA_LOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QA_LOG.md; sourceTree = "<group>"; };
+		21F32A5C2F3DCEE20074BDF3 /* RELEASE_CHECKLIST.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE_CHECKLIST.md; sourceTree = "<group>"; };
+		21F32A5E2F3DCF140074BDF3 /* STORE_LISTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = STORE_LISTING.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		21F32A2B2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWiki" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = 216EB3C22F3CF6A700A54ED1 /* MultiverseWiki */;
-		};
-		21F32A2C2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWikiUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = 216EB3D92F3CF6AA00A54ED1 /* MultiverseWikiUITests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		216EB3C52F3CF6A700A54ED1 /* MultiverseWiki */ = {
@@ -82,15 +82,6 @@
 		216EB3D32F3CF6AA00A54ED1 /* MultiverseWikiTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MultiverseWikiTests;
-			sourceTree = "<group>";
-		};
-		216EB3DD2F3CF6AA00A54ED1 /* MultiverseWikiUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				21F32A2B2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWiki" target */,
-				21F32A2C2F3D18A80074BDF3 /* Exceptions for "MultiverseWikiUITests" folder in "MultiverseWikiUITests" target */,
-			);
-			path = MultiverseWikiUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -125,6 +116,9 @@
 		216EB3BA2F3CF6A700A54ED1 = {
 			isa = PBXGroup;
 			children = (
+				21F32A592F3DCE610074BDF3 /* README.md */,
+				21F32A562F3DCE1D0074BDF3 /* docs */,
+				21F32A4D2F3DC3890074BDF3 /* Helpers */,
 				21F32A222F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld */,
 				216EB3F02F3CF71700A54ED1 /* Views */,
 				216EB3EF2F3CF71000A54ED1 /* ViewModels */,
@@ -132,7 +126,6 @@
 				216EB3ED2F3CF6F900A54ED1 /* Models */,
 				216EB3C52F3CF6A700A54ED1 /* MultiverseWiki */,
 				216EB3D32F3CF6AA00A54ED1 /* MultiverseWikiTests */,
-				216EB3DD2F3CF6AA00A54ED1 /* MultiverseWikiUITests */,
 				21F32A2E2F3D1A7C0074BDF3 /* Frameworks */,
 				216EB3C42F3CF6A700A54ED1 /* Products */,
 			);
@@ -161,6 +154,7 @@
 			children = (
 				21F32A252F3CFE8D0074BDF3 /* Persistence.swift */,
 				216EB3F22F3CF73C00A54ED1 /* NetworkService.swift */,
+				21F32A4B2F3D2A070074BDF3 /* NetworkMonitor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,6 +170,8 @@
 		216EB3F02F3CF71700A54ED1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21F32A512F3DC5D10074BDF3 /* InfoRow.swift */,
+				21F32A4F2F3DC54F0074BDF3 /* FavoriteDetailView.swift */,
 				21F32A372F3D21FF0074BDF3 /* EditCharacterView.swift */,
 				21F32A352F3D1C390074BDF3 /* ProfileView.swift */,
 				21F32A332F3D1B780074BDF3 /* LoginView.swift */,
@@ -191,6 +187,27 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21F32A4D2F3DC3890074BDF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21F32A542F3DC9910074BDF3 /* Logger+Extension.swift */,
+				21F32A4E2F3DC3910074BDF3 /* StoryGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		21F32A562F3DCE1D0074BDF3 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				21F32A5E2F3DCF140074BDF3 /* STORE_LISTING.md */,
+				21F32A5C2F3DCEE20074BDF3 /* RELEASE_CHECKLIST.md */,
+				21F32A5B2F3DCEC90074BDF3 /* QA_LOG.md */,
+				21F32A582F3DCE480074BDF3 /* RELEASE_NOTES.md */,
+				21F32A572F3DCE290074BDF3 /* ARCHITECTURE.md */,
+			);
+			path = docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +272,6 @@
 			);
 			dependencies = (
 				216EB3DC2F3CF6AA00A54ED1 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				216EB3DD2F3CF6AA00A54ED1 /* MultiverseWikiUITests */,
 			);
 			name = MultiverseWikiUITests;
 			packageProductDependencies = (
@@ -343,16 +357,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F32A242F3CFDB10074BDF3 /* MultiverseData.xcdatamodeld in Sources */,
+				21F32A502F3DC5510074BDF3 /* FavoriteDetailView.swift in Sources */,
 				21F32A262F3CFE8F0074BDF3 /* Persistence.swift in Sources */,
 				216EB3C92F3CF6A700A54ED1 /* ContentView.swift in Sources */,
 				21F32A382F3D22010074BDF3 /* EditCharacterView.swift in Sources */,
 				216EB3F42F3CF7FC00A54ED1 /* CharacterListViewModel.swift in Sources */,
+				21F32A5A2F3DCE640074BDF3 /* README.md in Sources */,
 				21F32A212F3CFADD0074BDF3 /* CharacterDetailView.swift in Sources */,
+				21F32A532F3DC60E0074BDF3 /* StoryGenerator.swift in Sources */,
 				216EB3F62F3CF81300A54ED1 /* Character.swift in Sources */,
 				216EB3F52F3CF80E00A54ED1 /* NetworkService.swift in Sources */,
+				21F32A4C2F3D2A0A0074BDF3 /* NetworkMonitor.swift in Sources */,
 				21F32A342F3D1B790074BDF3 /* LoginView.swift in Sources */,
 				21F32A362F3D1C3A0074BDF3 /* ProfileView.swift in Sources */,
+				21F32A552F3DC9920074BDF3 /* Logger+Extension.swift in Sources */,
 				21F32A282F3CFFA60074BDF3 /* FavoritesView.swift in Sources */,
+				21F32A522F3DC5D30074BDF3 /* InfoRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
