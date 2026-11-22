@@ -25,6 +25,7 @@ import CoreData
 
 struct MainCharacterListView: View {
     @StateObject private var viewModel = CharacterListViewModel()
+    @Namespace private var heroAnimation
     
     var body: some View {
         NavigationView {
@@ -32,8 +33,7 @@ struct MainCharacterListView: View {
                 ForEach(viewModel.filteredCharacters) { character in
                     NavigationLink(destination: CharacterDetailView(
                         character: character,
-                        animation: Namespace().wrappedValue,
-                        closeAction: {}
+                        animation: heroAnimation
                     )) {
                         HStack {
                             AsyncImage(url: URL(string: character.image)) { img in
@@ -54,6 +54,7 @@ struct MainCharacterListView: View {
                 }
             }
             .navigationTitle("Characters")
+            .searchable(text: $viewModel.searchText, prompt: "Search characters")
             .task {
                 await viewModel.loadData()
             }

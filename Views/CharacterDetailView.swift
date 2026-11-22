@@ -1,12 +1,14 @@
 import SwiftUI
 import CoreData
+import os
 
 struct CharacterDetailView: View {
     let character: Character
     var animation: Namespace.ID
-    var closeAction: () -> Void
+    var closeAction: (() -> Void)? = nil
     
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.dismiss) private var dismiss
     @StateObject private var network = NetworkMonitor()
     
      @State private var isFavorite = false
@@ -30,7 +32,13 @@ struct CharacterDetailView: View {
                     .matchedGeometryEffect(id: character.id, in: animation)
                     .frame(height: 350)
                     
-                    Button(action: closeAction) {
+                    Button(action: {
+                        if let closeAction {
+                            closeAction()
+                        } else {
+                            dismiss()
+                        }
+                    }) {
                         Image(systemName: "xmark.circle.fill")
                             .font(.system(size: 36))
                             .foregroundColor(.white)
@@ -95,17 +103,19 @@ struct CharacterDetailView: View {
     }
 
  
-     func checkIfSaved() {
+    func checkIfSaved() {
         let request: NSFetchRequest<FavoriteCharacter> = FavoriteCharacter.fetchRequest()
         request.predicate = NSPredicate(format: "id == %d", Int64(character.id))
         
         do {
             let count = try viewContext.count(for: request)
             isFavorite = count > 0
-        } catch { print(error) }
+        } catch {
+            Logger.data.error("Failed to check favorite status: \(error.localizedDescription)")
+        }
     }
     
-     func toggleFavorite() {
+    func toggleFavorite() {
         let request: NSFetchRequest<FavoriteCharacter> = FavoriteCharacter.fetchRequest()
         request.predicate = NSPredicate(format: "id == %d", Int64(character.id))
         
@@ -113,22 +123,25 @@ struct CharacterDetailView: View {
             let results = try viewContext.fetch(request)
             
             if let existing = results.first {
-                 viewContext.delete(existing)
+                viewContext.delete(existing)
                 isFavorite = false
+                Logger.data.info("Removed character \(character.id) from favorites")
             } else {
-                 let newEntry = FavoriteCharacter(context: viewContext)
+                let newEntry = FavoriteCharacter(context: viewContext)
                 newEntry.id = Int64(character.id)
                 newEntry.name = character.name
                 newEntry.image = character.image
                 newEntry.status = character.status
                 newEntry.species = character.species
+                newEntry.gender = character.gender
                 newEntry.story = generatedStory
                 
                 isFavorite = true
+                Logger.data.info("Saved character \(character.id) to favorites")
             }
-            try viewContext.save()  
+            try viewContext.save()
         } catch {
-            print("Error toggling favorite: \(error)")
+            Logger.data.error("Error toggling favorite: \(error.localizedDescription)")
         }
     }
 }

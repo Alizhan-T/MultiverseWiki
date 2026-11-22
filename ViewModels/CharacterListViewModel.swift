@@ -67,7 +67,7 @@ class CharacterListViewModel: ObservableObject {
             
         } catch {
             Logger.network.error("Network Error: \(error.localizedDescription)")
-            self.errorMessage = "Не удалось загрузить данные. Проверьте интернет."
+            self.errorMessage = "Failed to load characters. Please check your internet connection."
         }
         
         isLoading = false

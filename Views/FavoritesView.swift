@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import os
 
 struct FavoritesView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -60,8 +61,14 @@ struct FavoritesView: View {
     
     private func deleteCharacter(_ character: FavoriteCharacter) {
         withAnimation {
+            let characterId = character.id
             viewContext.delete(character)
-            try? viewContext.save()
+            do {
+                try viewContext.save()
+                Logger.data.info("Deleted favorite character \(characterId)")
+            } catch {
+                Logger.data.error("Failed to delete favorite character: \(error.localizedDescription)")
+            }
         }
     }
 }

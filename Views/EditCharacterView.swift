@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import os
 
 struct EditCharacterView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -42,9 +43,10 @@ struct EditCharacterView: View {
         
         do {
             try viewContext.save()
+            Logger.data.info("Updated favorite character \(character.id)")
             dismiss()
         } catch {
-            print("Error saving changes: \(error)")
+            Logger.data.error("Error saving changes: \(error.localizedDescription)")
         }
     }
 }

@@ -43,6 +43,7 @@ struct FavoriteDetailView: View {
                     
                     InfoRow(icon: "heart.text.square", label: "Status", value: favorite.status ?? "-")
                     InfoRow(icon: "person.fill", label: "Species", value: favorite.species ?? "-")
+                    InfoRow(icon: "figure.stand", label: "Gender", value: favorite.gender ?? "-")
                 }
                 .padding()
             }

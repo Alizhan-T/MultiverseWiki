@@ -1,5 +1,6 @@
 import SwiftUI
 import FirebaseAuth
+import os
 
 struct ProfileView: View {
     @Binding var isLoggedIn: Bool
@@ -33,9 +34,10 @@ struct ProfileView: View {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            isLoggedIn = false        
+            Logger.ui.info("User signed out successfully")
+            isLoggedIn = false
         } catch {
-            print("Error signing out: \(error.localizedDescription)")
+            Logger.ui.error("Error signing out: \(error.localizedDescription)")
         }
     }
 }
