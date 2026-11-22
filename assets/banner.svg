@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="MultiverseWiki — Native iOS Explorer">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="55%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#081C24" />
+    </linearGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.32" />
+      <stop offset="48%" stop-color="#06B6D4" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="50%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="ringStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.25" />
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#94A3B8" stroke-opacity="0.06" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Card Surface -->
+  <rect x="0" y="0" width="1200" height="300" rx="18" fill="url(#bg)" />
+  <rect x="0" y="0" width="1200" height="300" rx="18" fill="url(#grid)" />
+  <rect x="1" y="1" width="1198" height="298" rx="17" fill="none" stroke="#1E293B" stroke-width="2" />
+
+  <!-- Subtle Portal Emblem (Right Side) -->
+  <g transform="translate(975, 150)">
+    <circle cx="0" cy="0" r="145" fill="url(#portalGlow)" />
+    <circle cx="0" cy="0" r="96" fill="none" stroke="url(#ringStroke)" stroke-width="1.5" stroke-dasharray="10 6" />
+    <circle cx="0" cy="0" r="72" fill="none" stroke="#22D3EE" stroke-opacity="0.45" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#34D399" stroke-opacity="0.7" stroke-width="2" stroke-dasharray="28 10" />
+    <circle cx="0" cy="0" r="18" fill="#34D399" fill-opacity="0.18" stroke="#34D399" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="4.5" fill="#6EE7B7" />
+    <circle cx="72" cy="0" r="3.5" fill="#22D3EE" />
+    <circle cx="-46" cy="0" r="3" fill="#34D399" />
+    <circle cx="0" cy="-96" r="3" fill="#6EE7B7" />
+  </g>
+
+  <!-- Top Eyebrow -->
+  <g transform="translate(64, 58)">
+    <rect x="0" y="-14" width="214" height="26" rx="13" fill="#10B981" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35" stroke-width="1" />
+    <circle cx="15" cy="-1" r="4" fill="#34D399" />
+    <text x="27" y="3" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" letter-spacing="0.8">NATIVE iOS · v1.0.0</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="64" y="138" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="-1.2">MultiverseWiki</text>
+  <rect x="64" y="156" width="380" height="3" rx="1.5" fill="url(#accentLine)" />
+  <text x="64" y="192" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="400">Offline-ready iOS character explorer with reactive MVVM, Core Data CRUD &amp; Firebase Auth</text>
+
+  <!-- Tech Stack Pills -->
+  <g transform="translate(64, 224)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="600">
+    <rect x="0" y="0" width="84" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="42" y="19.5" text-anchor="middle" fill="#E2E8F0">SwiftUI</text>
+
+    <rect x="96" y="0" width="74" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="133" y="19.5" text-anchor="middle" fill="#E2E8F0">MVVM</text>
+
+    <rect x="182" y="0" width="102" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="233" y="19.5" text-anchor="middle" fill="#E2E8F0">Core Data</text>
+
+    <rect x="296" y="0" width="132" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="362" y="19.5" text-anchor="middle" fill="#E2E8F0">Firebase Auth</text>
+
+    <rect x="440" y="0" width="118" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="499" y="19.5" text-anchor="middle" fill="#E2E8F0">async/await</text>
+
+    <rect x="570" y="0" width="84" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="612" y="19.5" text-anchor="middle" fill="#6EE7B7">XCTest</text>
+  </g>
+</svg>

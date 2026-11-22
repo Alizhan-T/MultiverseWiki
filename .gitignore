@@ -1,14 +1,47 @@
+# macOS
 .DS_Store
-*.swp
-*~
-.apple
-DerivedData
-.GUI
-*.xcuserstate
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode
+DerivedData/
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 xcuserdata/
-os_activity_dt_mode
-*.break
+*.xcuserstate
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Build artifacts & archives
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.xcarchive
 *archive
+*.hmap
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Secrets & Environment
+GoogleService-Info.plist
+.env
+.env.*
+
+# Editor & misc
+*.swp
+*~
+.apple
+.GUI
+os_activity_dt_mode
+*.break
