@@ -20,6 +20,7 @@
 </p>
 
 <p align="center">
+  <a href="#app-showcase">Showcase</a> ·
   <a href="#key-features">Features</a> ·
   <a href="#architecture">Architecture</a> ·
   <a href="#tech-stack">Tech Stack</a> ·
@@ -28,6 +29,35 @@
   <a href="#testing--quality">Testing</a> ·
   <a href="#engineering-documentation">Docs</a>
 </p>
+
+---
+
+## App Showcase
+
+<p align="center">
+  <img src="./assets/showcase.jpg" width="100%" alt="MultiverseWiki iOS App Showcase — Characters Directory, Secret Dossier & Offline Mode, and Offline Favorites CRUD" />
+</p>
+
+### Interface Walkthrough
+
+| Directory & Infinite Scroll | Secret Dossier & Offline Mode | Offline Favorites (Core Data CRUD) |
+| :---: | :---: | :---: |
+| <img src="./assets/screens/characters.jpg" width="250" alt="Characters Directory Screen" /> | <img src="./assets/screens/dossier.jpg" width="250" alt="Character Detail & Secret Dossier Screen" /> | <img src="./assets/screens/favorites.jpg" width="250" alt="Offline Favorites CRUD Screen" /> |
+| `MainCharacterListView` + `CharacterListViewModel` (`URLSession` `async/await` pagination, `Combine` search debounce, error recovery overlay) | `CharacterDetailView` + `StoryGenerator` + `NetworkMonitor` (deterministic ID-seeded lore, live `OFFLINE MODE` banner, Core Data favorite toggle) | `FavoritesView` + `EditCharacterView` (`@FetchRequest` sorted persistence, swipe-to-delete, context menu editing, offline detail access) |
+
+<br/>
+
+<table>
+  <tr>
+    <td width="110" align="center">
+      <img src="./assets/app-icon.png" width="84" alt="MultiverseWiki App Icon" />
+    </td>
+    <td>
+      <strong>App Identity &amp; Asset Catalog</strong><br/>
+      Custom <code>1024×1024</code> portal-inspired iOS App Icon bundled directly in <code>MultiverseWiki/Assets.xcassets/AppIcon.appiconset/AppIcon.png</code> (universal, dark, and tinted appearances).
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -140,7 +170,11 @@ MultiverseWiki/
 ├── MultiverseWikiTests/
 │   └── MultiverseWikiTests.swift    # Unit test suite (8 XCTest specs)
 ├── docs/                            # Architecture, QA log, release checklist & App Store metadata
-├── assets/                          # Repository visual assets
+├── assets/                          # Hero banner, studio showcase, UI previews & 1024x1024 App Icon
+│   ├── banner.svg                   # Repository header banner
+│   ├── showcase.jpg                 # 3-device studio showcase graphic
+│   ├── app-icon.png                 # 1024x1024 iOS App Icon artwork
+│   └── screens/                     # Individual SwiftUI screen previews (characters, dossier, favorites)
 ├── GoogleService-Info.plist.example # Firebase configuration template
 ├── CHANGELOG.md                     # Semantic release history
 ├── CONTRIBUTING.md                  # Contribution & testing standards

@@ -29,6 +29,18 @@ Dive into the multiverse with **MultiverseWiki**, a native SwiftUI iOS companion
 
 ---
 
+## Visual Assets
+
+| Asset | Path | Usage |
+| :--- | :--- | :--- |
+| **App Icon (1024×1024)** | [`assets/app-icon.png`](../assets/app-icon.png) / `AppIcon.appiconset` | App Store Connect & iOS Home Screen icon |
+| **Hero Showcase** | [`assets/showcase.jpg`](../assets/showcase.jpg) | Press kit & repository hero preview |
+| **Screen 1 — Directory** | [`assets/screens/characters.jpg`](../assets/screens/characters.jpg) | iPhone 6.9" App Store preview |
+| **Screen 2 — Secret Dossier** | [`assets/screens/dossier.jpg`](../assets/screens/dossier.jpg) | iPhone 6.9" App Store preview |
+| **Screen 3 — Offline Favorites** | [`assets/screens/favorites.jpg`](../assets/screens/favorites.jpg) | iPhone 6.9" App Store preview |
+
+---
+
 ## Privacy Summary
 - **Authentication Data:** User email addresses and credentials are processed strictly for sign-in and account creation via Firebase Authentication.
 - **Local Storage:** Favorited characters, edits, and saved dossiers are stored locally on the user's device using Apple Core Data.
